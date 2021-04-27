@@ -1,5 +1,5 @@
 import { LightningElement, wire } from 'lwc';
-import getAccountData from '@salesforce/apex/AccountController.getAccountData';
+import getAccountData from '@salesforce/apex/AccountController.getRelatedContacts';
 
 const accountEj = [
     {Id:'0031700000pJRRSAA1',
