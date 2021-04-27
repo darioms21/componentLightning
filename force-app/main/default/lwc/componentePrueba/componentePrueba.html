@@ -1,0 +1,43 @@
+<template>
+    <lightning-card class="app" title="Título de la card" icon-name="custom:custom14">
+        <h1>Esto es una mísera prueba de H1</h1>
+        <h2>Hacemos lo mismo con H2</h2>
+        <h3>Ya puestos porque no H3</h3>
+    </lightning-card>
+    <br>
+    <lightning-card title="Probamos un tipo Datatable" icon-name="standard:app">
+        <div style="height: 300px;">
+            <lightning-datatable
+                        key-field="id"
+                        data={accounts.data}
+                        columns={columns}
+                        hide-checkbox-column>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+
+    <a href="https://www.google.com/" onclick={handleClick}>
+        <p>Esto es una prueba</p>
+    </a>
+
+    <lightning-card title="Vemos contactos con foreach">
+        <template for:each={accounts.data} for:item="account">
+            <a href="https://www.google.com/" key={account.Id}>
+                {account.Name}, {account.Type} <br>
+            </a>
+
+
+            <!--
+            <recipe-account-list-item
+                key={account.Id}
+                account={account}
+                onselect={handleSelect}
+            ></recipe-account-list-item>
+            
+            <a href="#" onclick={handleClick}>
+                <p>{account.Name}</p>
+            </a>
+            -->
+        </template>
+    </lightning-card>
+</template>
